@@ -143,7 +143,7 @@ urls.forEach(function(url){
 						  	let local_image_url = 'download2/'+art+'/photo_'+name
 
 						  	if(!fs.existsSync(local_image_url))
-						  		download(download_image_url, local_image_url, function(){ console.log('done'); })
+						  		download(download_image_url, local_image_url, function(){ console.log('done ' + local_image_url); })
 
 						  	photos.push(local_image_url)
 						  })
@@ -163,7 +163,7 @@ urls.forEach(function(url){
 						  	// return false
 
 						  	if(!fs.existsSync(local_image_url))
-						  		download(download_image_url, local_image_url, function(){ console.log('done'); })
+						  		download(download_image_url, local_image_url, function(){ console.log('done ' + local_image_url); })
 
 						  	examples.push(local_image_url)
 						  })
@@ -300,7 +300,7 @@ urls.forEach(function(url){
 							      if(err) {
 							          return console.log(err);
 							      }
-							      console.log("The file was saved!");
+							      console.log("The file was saved! input.json");
 							  }); 
 							});
 
